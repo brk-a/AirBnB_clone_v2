@@ -40,7 +40,7 @@ class FileStorage:
 
     def save(self):
         '''
-            Serializes __objects attribute to JSON file.
+            Serialises __objects attribute to JSON file.
         '''
         objects_dict = {}
         for key, val in FileStorage.__objects.items():
@@ -62,7 +62,7 @@ class FileStorage:
 
     def reload(self):
         '''
-            Deserializes the JSON file to __objects.
+            Deserialises the JSON file to __objects.
         '''
         try:
             with open(FileStorage.__file_path, encoding="UTF8") as fd:
