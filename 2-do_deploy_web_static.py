@@ -3,10 +3,11 @@
 '''
 Generates .tgz from web_static dir and deploys to servers
 '''
+
 from fabric.api import local, env, run, put, sudo
 
 
-env.hosts = ['35.227.39.114', '35.231.236.123']
+env.hosts = ['34.138.244.202', '3.239.124.233']
 
 
 def do_deploy(archive_path):
@@ -30,7 +31,7 @@ def do_deploy(archive_path):
             run('ln -s {}{} {}'.format(releases, archive_dir, current))
 
             return True
-        except:
+        except Error:
             return False
         else:
-        return False
+            return False
