@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 '''
     Implementation of the State class
 '''
@@ -25,6 +26,7 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             """
+            cities method
             """
             cities_dict = models.storage.all('City')
             cities_list = []

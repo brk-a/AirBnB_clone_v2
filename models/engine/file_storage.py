@@ -1,14 +1,16 @@
 #!/usr/bin/python3
+
 '''
     Define class FileStorage
 '''
+
 import json
 import models
 
 
 class FileStorage:
     '''
-        Serializes instances to JSON file and deserializes to JSON file.
+        Serialises instances to JSON file and deserialises to JSON file.
     '''
     __file_path = "file.json"
     __objects = {}
@@ -31,8 +33,6 @@ class FileStorage:
     def new(self, obj):
         '''
             Set in __objects the obj with key <obj class name>.id
-            Aguments:
-                obj : An instance object.
         '''
         key = str(obj.__class__.__name__) + "." + str(obj.id)
         value_dict = obj
