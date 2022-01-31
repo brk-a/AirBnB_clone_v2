@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-"""
+'''
 Return string when navigating to root dir
-"""
+'''
 
 from flask import Flask, render_template, g
 import models
